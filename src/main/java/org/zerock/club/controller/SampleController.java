@@ -1,6 +1,7 @@
 package org.zerock.club.controller;
 
 
+import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -29,6 +30,12 @@ public class SampleController {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @GetMapping("accessDenied")
+    public void accessDenied(){
+
+    }
+
 
     @GetMapping("/all")
     public void exAll(){

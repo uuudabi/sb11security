@@ -88,6 +88,8 @@ public class SecurityConfig {
 
         http.rememberMe().tokenValiditySeconds(60*60*24*7).userDetailsService(userDetailsService);
 
+        http.exceptionHandling().accessDeniedPage("/sample/accessDenied");
+
         return http.build();
     }
 
